@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import { ArrowRight, BrainCircuit, CheckCircle2, Layers, ThermometerSun, Zap, Check } from "lucide-react";
+import { ArrowRight, BrainCircuit, CheckCircle2, Layers, ThermometerSun, Zap } from "lucide-react";
 import Link from "next/link";
 
 const FADE_UP: Variants = {

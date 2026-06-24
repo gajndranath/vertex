@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowLeft, Share2, Clock, Calendar, CheckCircle2, ArrowRight } from "lucide-react";
+import { ArrowLeft, Share2, Clock, Calendar, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 

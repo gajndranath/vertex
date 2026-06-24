@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ChevronDown, MessageSquare, ShieldCheck, Settings, CreditCard, ArrowRight } from "lucide-react";
+import { ChevronDown, Settings, ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { getFaqs } from "@/lib/api";

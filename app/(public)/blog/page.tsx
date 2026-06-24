@@ -3,7 +3,6 @@
 import { motion, Variants } from "framer-motion";
 import { ArrowRight, ArrowUpRight, Search } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 
 const FADE_UP: Variants = {
   hidden: { opacity: 0, y: 30 },
