@@ -2,7 +2,6 @@
 
 import { motion, Variants } from "framer-motion";
 import { MapPin, Target, ShieldCheck, Users2 } from "lucide-react";
-import Image from "next/image";
 
 const FADE_UP: Variants = {
   hidden: { opacity: 0, y: 30 },

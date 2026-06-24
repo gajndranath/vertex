@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Inter, Space_Grotesk } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
 import { AnalyticsTracker } from "@/components/AnalyticsTracker";
 import { constructMetadata } from "@/lib/seo";
 
@@ -27,9 +25,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <AnalyticsTracker />
-          <Navbar />
-          <main className="flex-grow">{children}</main>
-          <Footer />
+          {children}
         </ThemeProvider>
       </body>
     </html>
