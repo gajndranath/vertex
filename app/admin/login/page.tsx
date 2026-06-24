@@ -14,7 +14,11 @@ export default function AdminLogin() {
     e.preventDefault();
     setError("");
     try {
-      const res = await fetch(process.env.NEXT_PUBLIC_API_URL ? `${process.env.NEXT_PUBLIC_API_URL}/admin/login` : 'http://localhost:5000/api/admin/login', {
+      const res = await fetch(
+        process.env.NEXT_PUBLIC_API_URL 
+          ? `${process.env.NEXT_PUBLIC_API_URL}/admin/login` 
+          : 'https://vertex-backeend.onrender.com/api/admin/login',
+        {
         method: 'POST',
         credentials: 'include',
         headers: { 'Content-Type': 'application/json' },

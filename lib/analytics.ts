@@ -26,7 +26,7 @@ export const trackEvent = async (type: string, data: Record<string, unknown> = {
 
     // Make an API call to our backend analytics route.
     // Using fetch with keepalive ensures it fires even if the user navigates away
-    await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'}/api/analytics/track`, {
+    await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'https://vertex-backeend.onrender.com'}/api/analytics/track`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

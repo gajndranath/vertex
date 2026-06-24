@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { Inbox } from "lucide-react";
 
-const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api";
+const API = process.env.NEXT_PUBLIC_API_URL || 'https://vertex-backeend.onrender.com/api';
 
 export default function LeadsPage() {
   const [leads, setLeads] = useState<any[]>([]);

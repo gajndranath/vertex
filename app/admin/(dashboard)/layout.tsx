@@ -26,7 +26,8 @@ export default function AdminDashboardLayout({ children }: { children: React.Rea
   const router = useRouter();
 
   const handleLogout = async () => {
-    await fetch("http://localhost:5000/api/admin/logout", { method: "POST", credentials: "include" });
+    const API = process.env.NEXT_PUBLIC_API_URL || 'https://vertex-backeend.onrender.com/api';
+    await fetch(`${API}/admin/logout`, { method: "POST", credentials: "include" });
     router.push("/admin/login");
   };
 

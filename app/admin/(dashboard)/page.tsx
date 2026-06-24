@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Inbox, FileText, Users, Activity, ArrowRight, TrendingUp } from "lucide-react";
 
-const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api";
+const API = process.env.NEXT_PUBLIC_API_URL || 'https://vertex-backeend.onrender.com/api';
 
 interface DashboardStats {
   totalLeads: number;

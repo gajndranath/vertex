@@ -1,7 +1,7 @@
 // Using fetch API as a lightweight alternative to axios for basic needs
 export const fetchApi = async (endpoint: string, options: RequestInit = {}) => {
   // Fallback to local API if NEXT_PUBLIC_API_URL is not set
-  const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://vertex-backeend.onrender.com/api';
   const response = await fetch(`${API_URL}${endpoint}`, {
     ...options,
     credentials: 'include',
