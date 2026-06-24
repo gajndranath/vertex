@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #FFFFFF;
+    --foreground: #09090B; /* Almost black */
+    --primary: #18181B; /* Zinc 900 */
+    --accent: #2563EB; /* Vibrant Blue */
+    --muted: #71717A; /* Zinc 500 */
+    --card: #F4F4F5; /* Zinc 100 */
+    --border: #E4E4E7; /* Zinc 200 */
+  }
+
+  .dark {
+    --background: #09090B;
+    --foreground: #FAFAFA;
+    --primary: #FAFAFA;
+    --accent: #3B82F6;
+    --muted: #A1A1AA;
+    --card: #18181B; 
+    --border: #27272A;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased selection:bg-accent selection:text-white transition-colors duration-300;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium tracking-tight;
+  }
+
+  /* Enterprise Structural Utilities */
+  .border-structural {
+    @apply border border-[var(--border)];
+  }
+  
+  .glass {
+    @apply bg-white/60 backdrop-blur-2xl border border-[var(--border)] shadow-sm;
+  }
+  .dark .glass {
+    @apply bg-zinc-900/60 backdrop-blur-2xl border border-[var(--border)] shadow-md;
+  }
+  
+  /* Noise Texture */
+  .bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-white/60;
+  }
+  
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .dark ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+@layer utilities {
+}
