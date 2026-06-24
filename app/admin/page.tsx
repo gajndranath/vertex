@@ -29,6 +29,7 @@ export default function AdminDashboard() {
           <ul className="space-y-3">
             <li><Link href="/admin/leads" className="text-accent hover:underline">Manage Leads &rarr;</Link></li>
             <li><Link href="/admin/blog" className="text-accent hover:underline">Manage Blog Posts &rarr;</Link></li>
+            <li><Link href="/admin/team" className="text-accent hover:underline">Manage Team Members &rarr;</Link></li>
             <li><Link href="/admin/analytics" className="text-accent hover:underline">View Detailed Analytics &rarr;</Link></li>
           </ul>
         </div>

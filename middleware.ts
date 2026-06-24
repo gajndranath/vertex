@@ -8,7 +8,7 @@ export function middleware(req: NextRequest) {
   const isAdminRoute = req.nextUrl.pathname.startsWith('/admin');
   
   // Protect admin routes
-  if (isAdminRoute && req.nextUrl.pathname !== '/admin/login') {
+  if (isAdminRoute && req.nextUrl.pathname !== '/admin/login' && req.nextUrl.pathname !== '/admin/signup') {
     const token = req.cookies.get('access_token')?.value;
     if (!token) {
       return NextResponse.redirect(new URL('/admin/login', req.url));
